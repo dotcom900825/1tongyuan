@@ -1,12 +1,11 @@
 require 'rubygems'
 require 'sinatra/base'
-require 'haml'
 
 class SinatraBootstrap < Sinatra::Base
   require './helpers/render_partial'
 
   get '/' do
-    haml :index
+    erb :index
   end
 
   # start the server if ruby file executed directly
